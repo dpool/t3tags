@@ -32,7 +32,8 @@ class SuggestWizardReceiver extends SuggestWizardDefaultReceiver
                 'uid' => $newUid,
             ];
             $pid = null;
-            $settings = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['t3tags'], ['allowed_classes' => false]);
+            //$settings = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['t3tags'], ['allowed_classes' => false]);
+            $settings = GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('t3tags');
             if (!empty($settings['tagPid'])) {
                 $pid = $settings['tagPid'];
             } elseif (!empty($this->allowedPages)) {

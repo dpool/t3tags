@@ -153,7 +153,7 @@ class TagRegistry
                 'default' => [
                     'minimumCharacters' => 2,
                     'searchWholePhrase' => true,
-                    'receiverClass' => \IchHabRecht\T3tags\Form\Wizard\SuggestWizardReceiver::class,
+                    //'receiverClass' => \IchHabRecht\T3tags\Form\Wizard\SuggestWizardReceiver::class,
                 ],
             ],
             'behaviour' => [
