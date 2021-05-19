@@ -13,6 +13,9 @@ return [
         'delete' => 'deleted',
         'default_sortby' => 'ORDER BY title',
         'versioningWS' => false,
+        'languageField' => 'sys_language_uid',
+        'transOrigPointerField' => 'l10n_parent',
+        'transOrigDiffSourceField' => 'l10n_diffsource',
         'rootLevel' => -1,
         'enablecolumns' => [
             'disabled' => 'hidden',
@@ -51,14 +54,14 @@ return [
     'columns' => [
         'hidden' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.hidden',
+            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.visible',
             'config' => [
                 'type' => 'check',
             ],
         ],
         'starttime' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
+            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
             'config' => [
                 'type' => 'input',
                 'renderType' => 'inputDateTime',
@@ -71,7 +74,7 @@ return [
         ],
         'endtime' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
+            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
             'config' => [
                 'type' => 'input',
                 'renderType' => 'inputDateTime',
@@ -89,7 +92,7 @@ return [
             'label' => 'LLL:EXT:t3tags/Resources/Private/Language/locallang_tca.xlf:tx_t3tags_tag.title',
             'config' => [
                 'type' => 'input',
-                'width' => 200,
+                'size' => 200,
                 'eval' => 'trim,required,lower',
             ],
         ],
